@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { books } from "../../../data/Books.jsx"; 
-import "../components/bookList.css"
+import "../components/list.css"
 import { useLends } from "../../../shared/hooks/UseLends.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 
