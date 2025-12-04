@@ -37,7 +37,7 @@ const About = () => {
 
                         <div className="about__image-wrapper  col-sm">
                             <img
-                                src="./img/lector.svg"
+                                src="../../../../public/img/lector.svg"
                                 alt="Library Online"
                                 
                                 className={showImage ? 'about__image image--show img-fluid' : 'image--hide'}
