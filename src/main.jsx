@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { LendsProvider } from './shared/hooks/UseLends.jsx'
 
-import '../public/css/bootstrap.css'
+import './css/bootstrap.css'
 import App from './App.jsx'
 
 

@@ -20,7 +20,7 @@ const Location = () => {
                     <div className="contact-section__map col-lg-7 col-md-6">
                         <img
                             className={showMap ? "contact-section__map-img image--show" : "image--hide"}
-                            src="../../../../public/img/Api_Google.png"
+                            src="./img/Api_Google.png"
                             alt="Mapa de ubicación"
                         />
                     </div>
