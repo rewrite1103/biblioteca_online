@@ -1,0 +1,45 @@
+.about {
+    margin-top: 5%;
+}
+
+
+.about__title {
+    font-size: 2rem;
+}
+
+.about__highlight {
+    color: #bd731d; 
+    font-weight: bold;
+}
+.about__content {
+    margin-top: 20px;
+}
+.about__description {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.about__button {
+    margin-top: 10px;
+}
+
+.about__image {
+    width: 60%; 
+    height: auto;;
+}
+
+.about__image-wrapper {
+    text-align: center;
+
+ }
+
+ .image--hide {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 1.2s ease-out;
+}
+
+.image--show {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 1.2s ease-out;

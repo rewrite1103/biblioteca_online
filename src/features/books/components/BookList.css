@@ -1,0 +1,108 @@
+.Books {
+  padding: 20px;
+}
+
+.Books__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Books__filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.Books__filters__search,
+.Books__filters__select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 250px;
+}
+
+
+.Books__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.Books__noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+.Books__card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.Books__card:hover {
+  transform: scale(1.03);
+}
+
+.Books__card__image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.Books__card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.Books__card__price {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.Books__card__button {
+  width: 100%;
+  padding: 10px;
+  background: #bd731d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.Books__card__button:hover {
+  background: #a66018;
+}
+
+.Books__card__alquiler {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.Books__card__inputDias {
+  width: 60px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.Books__card__costo {
+  font-weight: bold;
+  color: #bd731d;
+}

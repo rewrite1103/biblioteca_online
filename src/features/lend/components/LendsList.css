@@ -1,0 +1,83 @@
+.Alquileres {
+  padding: 2rem;
+}
+
+.Alquileres__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #bd731d;
+  font-weight: bold;
+}
+
+.Alquileres__empty {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.Alquileres__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.Alquileres__card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.Alquileres__card:hover {
+  transform: scale(1.03);
+}
+
+.Alquileres__card__image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.Alquileres__card__title {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.Alquileres__card__author,
+.Alquileres__card__dias,
+.Alquileres__card__costo {
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+
+.Alquileres__card__extend {
+  display: inline;
+  justify-content: center ;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.Alquileres__card__input {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.Alquileres__card__button {
+  padding: 0.5rem 1rem;
+  margin-top: 8%;
+  margin-left: 25%;
+  background: #bd731d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Alquileres__card__button:hover {
+  background: #a56117;
+}

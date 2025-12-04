@@ -1,0 +1,17 @@
+
+
+.footer {
+    background-color: #E95420;
+    padding: 20px 0;
+   
+}
+
+.footer__text {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer__container {
+    text-align: center;
+}
