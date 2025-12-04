@@ -1,6 +1,7 @@
 
-import "../components/map.css"
+import "../components/mapa.css"
 import { useShow } from "../../../shared/hooks/UseShow.jsx";
+import imageMap from "../../../../public/img/Api_Google.png"
 
 const Location = () => {
     let showMap = useShow();
@@ -20,7 +21,7 @@ const Location = () => {
                     <div className="contact-section__map col-lg-7 col-md-6">
                         <img
                             className={showMap ? "contact-section__map-img image--show" : "image--hide"}
-                            src="../../../../public/img/Api_Google.png"
+                            src={imageMap}
                             alt="Mapa de ubicación"
                         />
                     </div>

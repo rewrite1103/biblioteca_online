@@ -1,4 +1,4 @@
-import Map from "../components/map.jsx"
+import Map from "../components/mapa.jsx"
 
 const Location = () => {
     return (

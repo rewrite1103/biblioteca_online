@@ -3,7 +3,7 @@ import "../components/about.css"
 import { useEffect, useState } from "react";
 import { useShow } from "../../../shared/hooks/UseShow.jsx";
 
-
+import image from "../../../../public/img/lector.svg"
 
 
 
@@ -37,7 +37,7 @@ const About = () => {
 
                         <div className="about__image-wrapper  col-sm">
                             <img
-                                src="../../../../public/img/lector.svg"
+                                src={image}
                                 alt="Library Online"
                                 
                                 className={showImage ? 'about__image image--show img-fluid' : 'image--hide'}
