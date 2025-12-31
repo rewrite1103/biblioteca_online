@@ -23,6 +23,17 @@
   width: 250px;
 }
 
+.Books__categoryCount {
+  margin-top: 8px;          
+  font-size: 1rem;         
+  font-weight: 500;         
+  color: #2c3e50;            
+  background-color: #ecf0f1; 
+  padding: 6px 12px;         
+  border-radius: 6px;        
+  display: inline-block;     
+}
+
 
 .Books__grid {
   display: grid;
@@ -105,4 +116,20 @@
 .Books__card__costo {
   font-weight: bold;
   color: #bd731d;
+}
+.Books__suggestion {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.Books__suggestion__title {
+  color: #0d6efd;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.Books__suggestion:hover {
+  color: #000;
 }

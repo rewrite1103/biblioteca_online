@@ -1,5 +1,5 @@
 
-
+import { addLends, updateLend } from "../../features/lend/components/lensdApi";
 
 import { createContext, useContext, useState } from "react";
 
@@ -11,30 +11,60 @@ export const LendsProvider = ({ children }) => {
   const [lendedBooks, setLendedBooks] = useState([]);
 
   
-  const addToLendedBooks = (book, dias, costo) => {
-    const exists = lendedBooks.some((b) => b.id === book.id);
+const addToLendedBooks = (libro, dias, costo) => {
+  const exists = lendedBooks.some((item) => item.libro.id === libro.id);
 
-    if (!exists) {
-      setLendedBooks([
-        ...lendedBooks,
-        { ...book, dias, costo } 
-      ]);
-    }
-  };
+  if (!exists) {
+    const nuevoAlquiler = {
+      id: Date.now(), 
+      dias,
+      costo,
+      libro: { ...libro } 
+    };
 
+    setLendedBooks([...lendedBooks, nuevoAlquiler]);
+
+    addLends({ dias, costo, libro });
+  } else {
+    return "0";
+  }
+ 
+};
   
-  const extendLend = (id, extraDias) => {
-    setLendedBooks(prev =>
-      prev.map(book =>
-        book.id === id
-          ? { ...book, dias: book.dias + extraDias, costo: book.costo + (book.precio * extraDias) } 
-          : book
-      )
-    );
+
+const extendLend = async (id, extraDias) => {
+  const itemToUpdate = lendedBooks.find(item => item.id === id);
+  
+  if (!itemToUpdate) return;
+
+
+  const precioPorDia = itemToUpdate.costo / itemToUpdate.dias;
+  const nuevoCosto = itemToUpdate.costo + (precioPorDia * extraDias);
+  const nuevosDias = itemToUpdate.dias + extraDias;
+
+
+  const updatedItem = { 
+    ...itemToUpdate, 
+    dias: nuevosDias, 
+    costo: nuevoCosto 
   };
+
+  try {
+
+    console.log("Updating lend in DB:", updatedItem);
+    await updateLend(updatedItem); 
+
+    setLendedBooks(prev =>
+      prev.map(item => (item.id === id ? updatedItem : item))
+    );
+  } catch (error) {
+    console.error("Error al actualizar el alquiler:", error);
+    alert("No se pudo extender el alquiler. Inténtalo de nuevo.");
+  }
+};
 
   return (
-    <LendsContext.Provider value={{ lendedBooks, addToLendedBooks, extendLend }}>
+    <LendsContext.Provider value={{ lendedBooks, setLendedBooks, addToLendedBooks, extendLend }}>
       {children}
     </LendsContext.Provider>
   );
